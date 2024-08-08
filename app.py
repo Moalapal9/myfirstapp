@@ -13,6 +13,11 @@ def index():
 def user(name):
     return render_template('user.html', user_name=name)
 
+# user route with params
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 # error handler 404
 @app.errorhandler(404)
 def error_page(e):
